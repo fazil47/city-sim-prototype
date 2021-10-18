@@ -23,6 +23,10 @@ public class Tile : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        _gridManager.SetMouseOverGridPosition(this);
+        Vector3 tilePosition = transform.position;
+        if (_gridManager)
+        {
+            _gridManager.SetMouseOverGridPosition(new Vector2(tilePosition.x, tilePosition.z));
+        }
     }
 }

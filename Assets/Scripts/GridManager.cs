@@ -30,10 +30,9 @@ public class GridManager : MonoBehaviour
 
     #region Public Methods
 
-    public void SetMouseOverGridPosition(Tile tile)
+    public void SetMouseOverGridPosition(Vector2 position)
     {
-        Vector3 tilePosition = tile.transform.position;
-        _mouseOverGridPosition = new Vector2(tilePosition.x, tilePosition.z);
+        _mouseOverGridPosition = position;
     }
 
     #endregion
